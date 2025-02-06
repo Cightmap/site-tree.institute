@@ -22,7 +22,7 @@ const { title, description, date } = Astro.props;
     <main>
       <h1>{title}</h1>
       <p><em>{new Date(date).toLocaleDateString()}</em></p>
-      <slot />  <!-- Blog content will be injected here -->
+      <slot />  <!-- Blog content -will be injected here -->
     </main>
 
     <footer>

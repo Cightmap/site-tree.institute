@@ -27,7 +27,7 @@ Migrating a website can feel risky. You're excited about the new platform but wo
 
 ## Planning Your Site Migration Strategy
 
-Before moving any files, create a migration plan. This pre-migration phase sets you up for success. Overlooking this can cost businesses time and organic search traffic.
+Before moving any files, create a migration plan. This pre-migration phase sets you up for success. Overlooking this can cost businesses time and the organic search traffic.
 
 ### Understanding Your Existing Website
 
