@@ -17,6 +17,14 @@ if (!post) {
 }
 ---
 
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{post.data.title} | HumanVerified.org</title>
+    <meta name="description" content={post.data.description} />
+    <link rel="canonical" href={`https://humanverified.org/blog/${post.slug}`} />
+  </head>
+
 <BlogLayout title={post.data.title} description={post.data.description} date={post.data.date}>
   <article style="max-width: 800px; margin: auto; padding: 20px; background-color: #ffffff; border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
     <h1 style="color: #2c3e50; font-size: 2.5rem; text-align: center;">{post.data.title}</h1>

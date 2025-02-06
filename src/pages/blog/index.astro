@@ -4,6 +4,14 @@ import { getCollection } from 'astro:content';
 const posts = await getCollection('blog');
 ---
 
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blog | HumanVerified.org</title>
+    <meta name="description" content="Explore insightful articles about digital identity, AI, and the future of online verification on the HumanVerified.org blog." />
+    <link rel="canonical" href="https://humanverified.org/blog" />
+  </head>
+
 <main style="padding: 20px; max-width: 1000px; margin: auto;">
   <nav style="background-color: #007bff; padding: 10px; text-align: center;">
     <a href="/" style="color: white; margin: 0 15px; text-decoration: none;">Home</a>
