@@ -1,0 +1,32 @@
+---
+const { title, description, date } = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{title} | HumanVerified Blog</title>
+    <meta name="description" content={description} />
+    <link rel="icon" href="/favicon.svg" />
+  </head>
+  <body>
+    <header>
+      <h1>HumanVerified Blog</h1>
+      <nav>
+        <a href="/">Home</a> | <a href="/blog">Blog</a>
+      </nav>
+    </header>
+
+    <main>
+      <h1>{title}</h1>
+      <p><em>{new Date(date).toLocaleDateString()}</em></p>
+      <slot />  <!-- Blog content will be injected here -->
+    </main>
+
+    <footer>
+      <p>&copy; 2025 HumanVerified.org</p>
+    </footer>
+  </body>
+</html>

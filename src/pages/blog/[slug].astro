@@ -1,0 +1,26 @@
+---
+import { getCollection, getEntryBySlug } from 'astro:content';
+import BlogLayout from '../../layouts/BlogLayout.astro';
+
+// Required for dynamic routing
+export async function getStaticPaths() {
+  const posts = await getCollection('blog'); // Get all blog posts
+  return posts.map((post) => ({
+    params: { slug: post.slug },
+    props: { post },  // Pass the post as props
+  }));
+}
+
+// Access the post from props
+const { post } = Astro.props;
+
+if (!post) {
+  throw new Error(`Post not found`);
+}
+---
+
+<BlogLayout title={post.data.title} description={post.data.description} date={post.data.date}>
+  <article>
+    {post.body}  <!-- Renders the Markdown content -->
+  </article>
+</BlogLayout>
