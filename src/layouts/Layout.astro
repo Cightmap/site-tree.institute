@@ -6,6 +6,16 @@
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
 		<title>Astro Basics</title>
+
+		<!-- Google Analytics -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=G-211V5W3Q5Q"></script>
+		<script>
+			window.dataLayer = window.dataLayer || [];
+			function gtag(){dataLayer.push(arguments);}
+			gtag('js', new Date());
+			gtag('config', 'G-211V5W3Q5Q');
+		</script>
+		<!-- End Google Analytics -->
 	</head>
 	<body>
 		<slot />
@@ -20,3 +30,4 @@
 		height: 100%;
 	}
 </style>
+
