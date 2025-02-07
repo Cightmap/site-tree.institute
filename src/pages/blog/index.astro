@@ -19,7 +19,7 @@ const formattedPosts = posts.map((post) => ({
 
     <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; padding: 20px;">
       {formattedPosts.map(post => (
-        <div style="background: #ffffff; padding: 20px; border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); transition: transform 0.3s;" on:mouseover={() => (event.currentTarget.style.transform = 'scale(1.05)')} on:mouseout={() => (event.currentTarget.style.transform = 'scale(1)')}>
+        <div style="background: #fffbe1; padding: 20px; border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); transition: transform 0.3s;" on:mouseover={() => (event.currentTarget.style.transform = 'scale(1.05)')} on:mouseout={() => (event.currentTarget.style.transform = 'scale(1)')}>
           <h2><a href={`/blog/${post.slug}`} style="color: #007bff; text-decoration: none;">{post.data.title}</a></h2>
           <p style="color: #555;">{post.data.description}</p>
           <p style="font-size: 0.9rem; color: #888;">Published on {post.formattedDate}</p>
