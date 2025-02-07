@@ -10,6 +10,76 @@ const { title, description, date } = Astro.props;
     <title>{title} | HumanVerified Blog</title>
     <meta name="description" content={description} />
     <link rel="icon" href="/favicon.svg" />
+
+    <style>
+      /* Apply better background and text contrast */
+      body {
+        background-color: #F9FAFB; /* ✅ Light Gray for readability */
+        color: #1E293B; /* ✅ Dark Gray for contrast */
+        font-family: Arial, sans-serif;
+        line-height: 1.8;
+        margin: 0;
+        padding: 0;
+      }
+
+      /* Improve readability for blog content */
+      main {
+        background-color: #FFFFFF; /* ✅ White for content contrast */
+        color: #1E293B;
+        max-width: 900px;
+        margin: 20px auto;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      }
+
+      /* Header and Footer adjustments */
+      header, footer {
+        background-color: #0F172A; /* ✅ Deep Navy for contrast */
+        text-align: center;
+        padding: 15px 0;
+      }
+
+      /* ✅ HEADER/FOOTER FONT COLOR FIX */
+      header h1,
+      header nav a,
+      footer p {
+        color: #F8FAFC !important; /* ✅ White text, independent of body */
+      }
+
+      header nav a {
+        text-decoration: none;
+        font-weight: bold;
+        margin: 0 10px;
+      }
+
+      header nav a:hover {
+        text-decoration: underline;
+        color: #EAB308; /* ✅ High-contrast yellow hover */
+      }
+
+      h1 {
+        font-size: 28px;
+        margin-bottom: 10px;
+        color: #0F172A; /* ✅ Dark Blue */
+        text-align: center;
+      }
+
+      p {
+        font-size: 16px;
+        margin-bottom: 15px;
+        text-align: center;
+      }
+
+      /* Add spacing and readability improvements to blog text */
+      slot {
+        display: block;
+        font-size: 18px;
+        line-height: 1.8;
+        text-align: justify;
+        padding-top: 10px;
+      }
+    </style>
   </head>
   <body>
     <header>
@@ -20,9 +90,7 @@ const { title, description, date } = Astro.props;
     </header>
 
     <main>
-      <h1>{title}</h1>
-      <p><em>{new Date(date).toLocaleDateString()}</em></p>
-      <slot />  <!-- Blog content will be injected here -->
+      <slot />
     </main>
 
     <footer>

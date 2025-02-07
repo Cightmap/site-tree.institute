@@ -1,8 +1,8 @@
 ---
 title: "SEO Best Practices for Site Migration"
 description: "A well-planned site migration boosts online presence, while a sloppy one can tank your traffic. Learn how to migrate your website without losing SEO rankings."
-pubDate: "2024-02-07"
-author: "Jason Cline"
+pubDate: "2024-02-01"
+author: "Your Name"
 tags: ["SEO", "site migration", "best practices"]
 ---
 
@@ -69,53 +69,25 @@ tags: ["SEO", "site migration", "best practices"]
 <p>Prioritize important URLs. These will transfer authority to ensure users land on the correct pages.</p>
 
 <table>
-	<tbody>
-		<tr>
-			<th>Old URL</th>
-			<th>New URL</th>
-			<th>Redirect Type</th>
-		</tr>
-		<tr>
-			<td>/old-blog-post</td>
-			<td>/new-blog-post</td>
-			<td>301</td>
-		</tr>
-		<tr>
-			<td>/old-product-page</td>
-			<td>/new-product-page</td>
-			<td>301</td>
-		</tr>
-	</tbody>
+	<tr>
+		<th>Old URL</th>
+		<th>New URL</th>
+		<th>Redirect Type</th>
+	</tr>
+	<tr>
+		<td>/old-blog-post</td>
+		<td>/new-blog-post</td>
+		<td>301</td>
+	</tr>
+	<tr>
+		<td>/old-product-page</td>
+		<td>/new-product-page</td>
+		<td>301</td>
+	</tr>
 </table>
 
 <p>This is an example; redirect every URL on your site. Avoid broken pages as this increases bounce rates and hurts crawling. These issues are noticeable in Google Analytics reports.</p>
 
-<h3 id="updatinginternallinksandsitemaps">Updating Internal Links and Sitemaps</h3>
-
-<p>Updating internal links helps users navigate your site, which search engines value. Fix broken or old links using ScreamingFrog. Your website architecture guides your internal linking strategy for a logical SEO-driven order.</p>
-
-<h3 id="handling404slikeapro">Handling 404s Like a Pro</h3>
-
-<p>404 errors happen during site migrations. Some pages won&rsquo;t transfer perfectly. Plan beforehand for missing pages.</p>
-
-<h3 id="mobilefriendliness">Mobile Friendliness</h3>
-
-<p>Mobile usability is crucial for site visibility. Google prioritizes mobile-first indexing. Your responsive design should work on smartphones, laptops, and desktops.</p>
-
-<h2 id="postmigrationseochecks">Post-Migration SEO Checks</h2>
-
-<p>Your work doesn&#39;t end after the move. These checks confirm everything is working.</p>
-
-<h3 id="monitoringandreporting">Monitoring and Reporting</h3>
-
-<p>Monitor your site&#39;s performance after migrating. Set up pre- and post-migration reporting benchmarks. Use real-time Google Analytics 4 reports.</p>
-
-<h3 id="respondingtochallenges">Responding to Challenges</h3>
-
-<p>Problems can occur during site migrations. A thorough SEO approach minimizes risks, but no strategy is perfect. Traffic or rankings might fluctuate. Use reports from Google Analytics and Search Console to address challenges proactively.</p>
-
 <h2 id="conclusion">Conclusion</h2>
 
-<p>SEO best practices for site migration are not one-size-fits-all. Success involves SEO standards, user-focused design, and quality assurance. SEO is a crucial component for maintaining website visibility during migrations.</p>
-
-<p>Following Google&#39;s best practices for site migrations and focusing on user experience can minimize negative impacts on organic search traffic, preserving your rankings while ensuring that visitors find relevant information within their journey along the migration path.</p>
+<p>Following SEO best practices for site migration ensures rankings, traffic, and user experience remain intact.</p>

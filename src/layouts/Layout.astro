@@ -1,33 +1,137 @@
-<!doctype html>
+---
+const { title, description, canonicalUrl } = Astro.props;
+---
+
+<!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>{title ? `${title} | HumanVerified.org` : 'HumanVerified.org'}</title>
-		<meta name="description" content={description || "Premium domain for sale - HumanVerified.org"} />
-		<link rel="canonical" href={canonicalUrl || "https://humanverified.org"} />
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{title ? `${title} | HumanVerified.org` : "HumanVerified.org"}</title>
+    <meta name="description" content={description || "Premium domain for sale - HumanVerified.org"} />
+    <link rel="canonical" href={canonicalUrl || "https://humanverified.org"} />
 
-		<!-- Google Analytics -->
-		<script async src="https://www.googletagmanager.com/gtag/js?id=G-211V5W3Q5Q"></script>
-		<script>
-			window.dataLayer = window.dataLayer || [];
-			function gtag(){dataLayer.push(arguments);}
-			gtag('js', new Date());
-			gtag('config', 'G-211V5W3Q5Q');
-		</script>
-		<!-- End Google Analytics -->
-	</head>
-	<body>
-		<slot />
-	</body>
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-211V5W3Q5Q"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "G-211V5W3Q5Q");
+    </script>
+    <!-- End Google Analytics -->
+
+    <style>
+      /* General styles for accessibility */
+      html, body {
+        margin: 0;
+        width: 100%;
+        height: 100%;
+        font-family: Arial, sans-serif;
+        line-height: 1.8;
+        background-color: #F9FAFB; /* ✅ Light Gray for readability */
+        color: #1E293B; /* ✅ Dark Gray for contrast (Body Text) */
+      }
+
+      /* Main container with improved spacing */
+      body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      main {
+        background-color: #FFFFFF; /* ✅ White for contrast */
+        color: #1E293B;
+        max-width: 900px;
+        width: 100%;
+        margin: 20px auto;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      }
+
+      /* Header & Footer improvements */
+      header, footer {
+        width: 100%;
+        background-color: #040405; /* ✅ Black background */
+        text-align: center;
+        padding: 15px 0;
+      }
+
+      /* ✅ HEADER TEXT COLOR NOW SEPARATE FROM BODY */
+      header h1,
+      header nav a {
+        color: #FFFFFF !important; /* ✅ White text, independent of body */
+      }
+
+      /* ✅ FOOTER TEXT CENTERED & COLOR FIXED */
+      footer p {
+        color: #F8FAFC !important; /* ✅ White footer text */
+        text-align: center !important; /* ✅ Always centered */
+        margin: 0;
+      }
+
+      /* ✅ Footer link color independent of body */
+      footer a {
+        color: #F8FAFC !important;
+        text-decoration: none;
+      }
+
+      footer a:hover {
+        text-decoration: underline;
+        color: #EAB308; /* ✅ High-contrast yellow */
+      }
+
+      /* ✅ Keeps navigation links independent */
+      header nav a {
+        color: #FFFFFF !important;
+        text-decoration: none;
+        font-weight: bold;
+        margin: 0 15px;
+      }
+
+      header nav a:hover {
+        text-decoration: underline;
+        color: #EAB308;
+      }
+
+      /* Improved readability for the content */
+      h1, h2, h3 {
+        color: #0F172A; /* ✅ Dark blue for strong headings */
+      }
+
+      p {
+        font-size: 18px;
+        text-align: justify;
+        margin-bottom: 15px;
+      }
+
+      /* Add spacing and visual improvements */
+      slot {
+        display: block;
+        font-size: 18px;
+        line-height: 1.8;
+        text-align: justify;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>HumanVerified.org</h1>
+      <nav>
+        <a href="/">Home</a> | <a href="/blog">Blog</a>
+      </nav>
+    </header>
+
+    <main>
+      <slot />
+    </main>
+
+    <footer>
+      <p>&copy; 2025 HumanVerified.org</p>
+    </footer>
+  </body>
 </html>
-
-<style>
-	html,
-	body {
-		margin: 0;
-		width: 100%;
-		height: 100%;
-	}
-</style>
-

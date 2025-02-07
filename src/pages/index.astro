@@ -1,123 +1,64 @@
 ---
-// index.astro
+import Layout from '../layouts/Layout.astro'; // ✅ Import Layout
 ---
 
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-	<meta charset="UTF-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<title>HumanVerified.org - Premium Domain for Sale</title>
-	<meta name="description" content="HumanVerified.org is a premium domain perfect for digital identity, AI ethics, and cybersecurity businesses." />
-	<link rel="canonical" href="https://humanverified.org/" />
-	
-    <style>
-      body {
-        font-family: Arial, sans-serif;
-        margin: 0;
-        padding: 0;
-        background-color: #f4f4f4;
-        color: #333;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        min-height: 100vh;
-      }
-      header, section, footer {
-        width: 100%;
-        max-width: 800px;
-        padding: 20px;
-        text-align: center;
-      }
-      h1 {
-        font-size: 2.5em;
-        color: #2c3e50;
-      }
-      p {
-        font-size: 1.2em;
-        line-height: 1.6;
-      }
-      .cta {
-        background-color: #007bff;
-        color: white;
-        padding: 15px 30px;
-        border: none;
-        border-radius: 5px;
-        font-size: 1.2em;
-        cursor: pointer;
-        margin: 20px 0;
-        transition: background-color 0.3s;
-      }
-      .cta:hover {
-        background-color: #0056b3;
-      }
-      form {
-        display: flex;
-        flex-direction: column;
-        gap: 10px;
-      }
-      input, textarea {
-        padding: 10px;
-        font-size: 1em;
-        width: 100%;
-        max-width: 400px;
-        margin: 0 auto;
-        border: 1px solid #ccc;
-        border-radius: 4px;
-      }
-      button[type="submit"] {
-        background-color: #28a745;
-        color: white;
-        padding: 10px;
-        border: none;
-        border-radius: 4px;
-        cursor: pointer;
-      }
-      button[type="submit"]:hover {
-        background-color: #218838;
-      }
-    </style>
-  </head>
-  <nav style="background-color: #007bff; padding: 10px; text-align: center;">
-	<a href="/" style="color: white; margin: 0 15px; text-decoration: none;">Home</a>
-	<a href="/blog" style="color: white; margin: 0 15px; text-decoration: none;">Blog</a>
-	<a href="#inquiry-form" style="color: white; margin: 0 15px; text-decoration: none;">Inquire Now</a>
-  </nav>
-</html>
-  <body>
+<Layout 
+  title="HumanVerified.org - Premium Domain for Sale"
+  description="HumanVerified.org is a premium domain perfect for digital identity, AI ethics, and cybersecurity businesses."
+  canonicalUrl="https://humanverified.org/"
+>
+
+  <main style="display: flex; flex-direction: column; align-items: center; text-align: center;">
     <header>
       <h1>HumanVerified.org is For Sale!</h1>
       <p>Perfect for businesses in digital identity verification, AI ethics, and cybersecurity.</p>
-      <button class="cta" onclick="document.getElementById('inquiry-form').scrollIntoView()">Inquire Now</button>
+      <a href="#inquiry-form" style="
+        background-color: #007bff; /* ✅ Blue color */
+        color: white;
+        padding: 15px 30px;
+        border-radius: 5px;
+        text-decoration: none;
+        font-size: 1.2rem;
+        display: inline-block;
+        margin-top: 15px;
+      ">Inquire Now</a>
     </header>
 
     <section>
       <h2>Why Choose HumanVerified.org?</h2>
-      <ul>
+      <ul style="list-style: none; padding: 0;">
         <li>Memorable & authoritative domain</li>
         <li>Perfect for AI regulation, cybersecurity, and digital trust</li>
         <li>Future-proof for the evolving identity verification landscape</li>
       </ul>
-	  <h2>One of a kind domain name. When it's gone, it's gone.</h2>
+      <h2>One of a kind domain name. When it's gone, it's gone.</h2>
     </section>
 
-	<div style="text-align: center; margin: 20px 0;">
-		<a href="/blog" style="background-color: #28a745; color: white; padding: 15px 30px; border-radius: 5px; text-decoration: none; font-size: 1.2rem;">Visit Our Blog</a>
-	  </div>
+    <div style="text-align: center; margin: 20px 0;">
+      <a href="/blog" style="
+        background-color: #28a745;
+        color: white;
+        padding: 15px 30px;
+        border-radius: 5px;
+        text-decoration: none;
+        font-size: 1.2rem;
+        display: inline-block;
+      ">Visit Our Blog</a>
+    </div>
 
     <section id="inquiry-form">
       <h2>Interested? Make an Inquiry</h2>
-      <form action="https://formspree.io/f/xjkgokjr" method="POST">
-        <input type="text" name="name" placeholder="Your Name" required />
-        <input type="email" name="email" placeholder="Your Email" required />
-        <textarea name="message" placeholder="Your Message" rows="4" required></textarea>
-        <button type="submit">Submit Inquiry</button>
+      <form action="https://formspree.io/f/xjkgokjr" method="POST" style="display: flex; flex-direction: column; align-items: center; width: 100%; max-width: 400px; margin: auto;">
+        <input type="text" name="name" placeholder="Your Name" required style="width: 100%; padding: 10px; font-size: 1em; border: 1px solid #ccc; border-radius: 4px; margin-bottom: 10px;" />
+        <input type="email" name="email" placeholder="Your Email" required style="width: 100%; padding: 10px; font-size: 1em; border: 1px solid #ccc; border-radius: 4px; margin-bottom: 10px;" />
+        <textarea name="message" placeholder="Your Message" rows="4" required style="width: 100%; padding: 10px; font-size: 1em; border: 1px solid #ccc; border-radius: 4px; margin-bottom: 10px;"></textarea>
+        <button type="submit" style="width: 100%; background-color: #28a745; color: white; padding: 15px; font-size: 1.2rem; border: none; border-radius: 4px; cursor: pointer;">Submit Inquiry</button>
       </form>
     </section>
 
     <footer>
       <p>&copy; 2025 HumanVerified.org | Secure transactions via Escrow.com</p>
     </footer>
-  </body>
- 
+  </main>
+
+</Layout>

@@ -1,4 +1,5 @@
 ---
+import Layout from '../../layouts/Layout.astro';
 import { getCollection } from 'astro:content';
 
 const posts = await getCollection('blog');
@@ -12,31 +13,19 @@ const formattedPosts = posts.map((post) => ({
 }));
 ---
 
-<head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Blog | HumanVerified.org</title>
-    <meta name="description" content="Explore insightful articles about digital identity, AI, and the future of online verification on the HumanVerified.org blog." />
-    <link rel="canonical" href="https://humanverified.org/blog" />
-</head>
+<Layout title="Blog | HumanVerified.org" description="Explore insightful articles about digital identity, AI, and the future of online verification on the HumanVerified.org blog.">
+  <main style="padding: 20px; max-width: 1000px; margin: auto;">
+    <h1 style="text-align: center; color: #2c3e50;">Latest Blog Posts</h1>
 
-<main style="padding: 20px; max-width: 1000px; margin: auto;">
-  <nav style="background-color: #007bff; padding: 10px; text-align: center;">
-    <a href="/" style="color: white; margin: 0 15px; text-decoration: none;">Home</a>
-    <a href="/blog" style="color: white; margin: 0 15px; text-decoration: none;">Blog</a>
-    <a href="#inquiry-form" style="color: white; margin: 0 15px; text-decoration: none;">Inquire Now</a>
-  </nav>
-
-  <h1 style="text-align: center; color: #2c3e50;">Latest Blog Posts</h1>
-
-  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; padding: 20px;">
-    {formattedPosts.map(post => (
-      <div style="background: white; padding: 20px; border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); transition: transform 0.3s;" on:mouseover={() => (event.currentTarget.style.transform = 'scale(1.05)')} on:mouseout={() => (event.currentTarget.style.transform = 'scale(1)')}>
-        <h2><a href={`/blog/${post.slug}`} style="color: #007bff; text-decoration: none;">{post.data.title}</a></h2>
-        <p style="color: #555;">{post.data.description}</p>
-        <p style="font-size: 0.9rem; color: #888;">Published on {post.formattedDate}</p>
-        <a href={`/blog/${post.slug}`} style="display: inline-block; margin-top: 10px; padding: 10px 15px; background-color: #007bff; color: white; border-radius: 4px; text-decoration: none;">Read More →</a>
-      </div>
-    ))}
-  </div>
-</main>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; padding: 20px;">
+      {formattedPosts.map(post => (
+        <div style="background: #ffffff; padding: 20px; border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); transition: transform 0.3s;" on:mouseover={() => (event.currentTarget.style.transform = 'scale(1.05)')} on:mouseout={() => (event.currentTarget.style.transform = 'scale(1)')}>
+          <h2><a href={`/blog/${post.slug}`} style="color: #007bff; text-decoration: none;">{post.data.title}</a></h2>
+          <p style="color: #555;">{post.data.description}</p>
+          <p style="font-size: 0.9rem; color: #888;">Published on {post.formattedDate}</p>
+          <a href={`/blog/${post.slug}`} style="display: inline-block; margin-top: 10px; padding: 10px 15px; background-color: #007bff; color: white; border-radius: 4px; text-decoration: none;">Read More →</a>
+        </div>
+      ))}
+    </div>
+  </main>
+</Layout>
