@@ -70,25 +70,27 @@ pubDate: "2024-01-31"
 
 <p>Prioritize important URLs. These will transfer authority to ensure users land on the correct pages.</p>
 
-<table>
-	<tbody>
-		<tr>
-			<th>Old URL</th>
-			<th>New URL</th>
-			<th>Redirect Type</th>
-		</tr>
-		<tr>
-			<td>/old-blog-post</td>
-			<td>/new-blog-post</td>
-			<td>301</td>
-		</tr>
-		<tr>
-			<td>/old-product-page</td>
-			<td>/new-product-page</td>
-			<td>301</td>
-		</tr>
-	</tbody>
-</table>
+<table style="width:100%; border-collapse: collapse;">
+    <thead>
+      <tr style="background-color: #f4f4f4;">
+        <th style="border: 1px solid #ddd; padding: 8px;">Old URL</th>
+        <th style="border: 1px solid #ddd; padding: 8px;">New URL</th>
+        <th style="border: 1px solid #ddd; padding: 8px;">Redirect Type</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="border: 1px solid #ddd; padding: 8px;">/old-blog-post</td>
+        <td style="border: 1px solid #ddd; padding: 8px;">/new-blog-post</td>
+        <td style="border: 1px solid #ddd; padding: 8px;">301</td>
+      </tr>
+      <tr>
+        <td style="border: 1px solid #ddd; padding: 8px;">/old-product-page</td>
+        <td style="border: 1px solid #ddd; padding: 8px;">/new-product-page</td>
+        <td style="border: 1px solid #ddd; padding: 8px;">301</td>
+      </tr>
+    </tbody>
+  </table>
 
 <p>This is an example; redirect every URL on your site. Avoid broken pages as this increases bounce rates and hurts crawling. These issues are noticeable in Google Analytics reports.</p>
 
