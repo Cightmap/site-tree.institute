@@ -26,3 +26,5 @@ pnpm-debug.log*
 # Backup files
 src/pages/index_backup.astro
 
+# Depreciated files
+deprecated-files/

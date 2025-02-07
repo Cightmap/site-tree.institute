@@ -11,6 +11,7 @@
   "dependencies": {
     "@astrojs/mdx": "^4.0.8",
     "@astrojs/sitemap": "^3.2.1",
-    "astro": "^5.2.5"
+    "astro": "^5.2.5",
+    "remark-gfm": "^4.0.0"
   }
 }

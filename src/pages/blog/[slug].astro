@@ -1,38 +1,35 @@
 ---
-import { getCollection, getEntryBySlug } from 'astro:content';
+import { getCollection } from 'astro:content';
 import BlogLayout from '../../layouts/BlogLayout.astro';
 
 export async function getStaticPaths() {
-  const posts = await getCollection('blog');
-  return posts.map((post) => ({
-    params: { slug: post.slug },
-    props: { post },
-  }));
+ const posts = await getCollection('blog');
+ return posts.map((post) => ({
+   params: { slug: post.slug },
+   props: { post },
+ }));
 }
 
 const { post } = Astro.props;
 
 if (!post) {
-  throw new Error(`Post not found`);
+ throw new Error(`Post not found`);
 }
+
+// ✅ Ensure valid date formatting
+const formattedDate = post.data.pubDate
+  ? new Date(post.data.pubDate).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })
+  : "Unknown Date";
 ---
 
-<head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>{post.data.title} | HumanVerified.org</title>
-    <meta name="description" content={post.data.description} />
-    <link rel="canonical" href={`https://humanverified.org/blog/${post.slug}`} />
-  </head>
-
-<BlogLayout title={post.data.title} description={post.data.description} date={post.data.date}>
+<BlogLayout title={post.data.title} description={post.data.description} date={formattedDate}>
   <article style="max-width: 800px; margin: auto; padding: 20px; background-color: #ffffff; border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
     <h1 style="color: #2c3e50; font-size: 2.5rem; text-align: center;">{post.data.title}</h1>
-    <p style="font-size: 0.9rem; color: #888; text-align: center;">Published on {new Date(post.data.date).toLocaleDateString()}</p>
+    <p style="font-size: 0.9rem; color: #888; text-align: center;">Published on {formattedDate}</p>
     <hr style="margin: 20px 0; border: none; border-top: 1px solid #eee;" />
-    <div style="font-size: 1.1rem; line-height: 1.8; color: #333;">
-      {post.body}
-    </div>
+
+    <!-- ✅ Ensure Markdown renders as HTML -->
+    <div set:html={post.body}></div>
   </article>
 
   <div style="text-align: center; margin-top: 20px;">
