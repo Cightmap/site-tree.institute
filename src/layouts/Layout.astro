@@ -124,6 +124,35 @@ const { title, description, canonicalUrl } = Astro.props;
         margin: 15px 0; /* Adds space before and after the button */
       }
 
+      .escrow-button-container {
+        margin-top: 20px !important;
+        margin-bottom: 80px !important; /* Force more space below */
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        width: 100% !important;
+        max-width: 600px !important; /* Ensures button is not affected by parent styles */
+      }
+
+      .escrow-button-container form {
+        width: 100% !important;
+      }
+
+      .escrow-button-container button {
+        display: block !important;
+        width: auto !important;
+        margin-bottom: 80px !important; /* Extra space BELOW the button */
+      }
+
+      .offer-section {
+        padding-bottom: 80px !important;
+        margin-bottom: 80px !important;
+      }
+
+      .inquire-section {
+        margin-top: 40px;
+      }
+
     </style>
   </head>
   <body>
