@@ -28,7 +28,7 @@ echo "Updating domain references to $INPUT_DOMAIN..."
 # Use lowercase in astro.config.mjs for URL consistency
 sed -i '' "s/humanverified.org/$LOWERCASE_DOMAIN/g" astro.config.mjs 2>/dev/null || true
 # Use exact input capitalization for display text
-sed -i '' "s/humanverified.org/$INPUT_DOMAIN/g" src/pages/index.astro src/layouts/Layout.astro src/pages/blog/*.astro src/content/blog/*.md 2>/dev/null || true
-sed -i '' "s/HumanVerified.org/$INPUT_DOMAIN/g" src/pages/index.astro src/layouts/Layout.astro src/pages/blog/*.astro 2>/dev/null || true
+sed -i '' "s/humanverified.org/$INPUT_DOMAIN/g" src/pages/index.astro src/layouts/Layout.astro src/layouts/BlogLayout.astro src/pages/blog/*.astro src/content/blog/*.md 2>/dev/null || true
+sed -i '' "s/HumanVerified.org/$INPUT_DOMAIN/g" src/pages/index.astro src/layouts/Layout.astro src/layouts/BlogLayout.astro src/pages/blog/*.astro 2>/dev/null || true
 
 echo "New site created in $NEW_DIR! Run 'npm install' or 'pnpm install' and customize."
