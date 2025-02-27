@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://humanverified.org/sitemap-index.xml
+Sitemap: https://{website.com}/sitemap.xml

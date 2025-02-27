@@ -4,7 +4,7 @@ import sitemap from '@astrojs/sitemap';
 import remarkGfm from 'remark-gfm';
 
 export default defineConfig({
-  site: 'https://humanverified.org',
+  site: 'https://tree.institute',
   integrations: [mdx(), sitemap()],
   markdown: {
     remarkPlugins: [remarkGfm] // Enables better Markdown support (tables, strikethrough, etc.)
