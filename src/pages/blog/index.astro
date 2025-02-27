@@ -3,6 +3,8 @@ import Layout from '../../layouts/Layout.astro';
 import { getCollection } from 'astro:content';
 
 const posts = await getCollection('blog');
+// Sort by pubDate descending (newest first)
+posts.sort((a, b) => new Date(b.data.pubDate) - new Date(a.data.pubDate));
 
 // ✅ Ensure all dates are properly formatted before rendering
 const formattedPosts = posts.map((post) => ({
