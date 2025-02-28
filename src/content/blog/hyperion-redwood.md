@@ -129,29 +129,3 @@ In the heart of California&rsquo;s Redwood National Park, a towering giant named
 
 	<p dir="ltr" id="isPasted"><a href="https://shareasale.com/r.cfm?b=2199513&u=4318791&m=133601&urllink=&afftrack=" target="_blank" rel="noopener noreferrer">[Check out Tree House Supplies]</a></p>
 </div>
-<!--themify_builder_content-->
-<div id="themify_builder_content-763" data-postid="763" class="themify_builder_content themify_builder_content-763 themify_builder tf_clear">
-</div>
-
-<p>
-	<!--/themify_builder_content-->
-	<!--themify_builder_content-->
-</p>
-<div id="themify_builder_content-763" data-postid="763" class="themify_builder_content themify_builder_content-763 themify_builder tf_clear">
-</div>
-
-<p>
-	<!--/themify_builder_content-->
-	<!--themify_builder_content-->
-</p>
-<div id="themify_builder_content-763" data-postid="763" class="themify_builder_content themify_builder_content-763 themify_builder tf_clear">
-</div>
-<!--/themify_builder_content-->
-<!--themify_builder_content-->
-<div id="themify_builder_content-763" data-postid="763" class="themify_builder_content themify_builder_content-763 themify_builder tf_clear">
-</div>
-<!--/themify_builder_content-->
-<!--themify_builder_content-->
-<div id="themify_builder_content-763" data-postid="763" class="themify_builder_content themify_builder_content-763 themify_builder tf_clear">
-</div>
-<!--/themify_builder_content-->

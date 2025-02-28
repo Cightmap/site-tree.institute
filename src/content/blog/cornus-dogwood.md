@@ -289,17 +289,3 @@ tags: ["Cornus Dogwood Guide", "Flowering Dogwood Care", "Kousa Dogwood Features
 
 	<p dir="ltr" id="isPasted"><a href="https://shareasale.com/r.cfm?b=2199513&u=4318791&m=133601&urllink=&afftrack=" target="_blank" rel="noopener noreferrer">[Check out Tree House Supplies]</a></p>
 </div>
-<!--themify_builder_content-->
-<div id="themify_builder_content-437" class="themify_builder_content themify_builder_content-437 themify_builder tf_clear" data-postid="437"> </div>
-
-<p>
-	<!--/themify_builder_content-->
-	<!--themify_builder_content-->
-</p>
-<div id="themify_builder_content-437" data-postid="437" class="themify_builder_content themify_builder_content-437 themify_builder tf_clear">
-</div>
-<!--/themify_builder_content-->
-<!--themify_builder_content-->
-<div id="themify_builder_content-437" data-postid="437" class="themify_builder_content themify_builder_content-437 themify_builder tf_clear">
-</div>
-<!--/themify_builder_content-->

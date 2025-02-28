@@ -243,33 +243,3 @@ tags: ["Tree Trimming Guide", "Pruning Healthy Trees", "Best Time to Trim Trees"
 <p dir="ltr" id="isPasted">Thanks for stopping by! If our tree care expertise helped you navigate the wilderness of pruning and trimming, show some love by visiting our affiliate partners&rsquo; sites! Your support enables us to cultivate more top-notch content, crafting a greener, more magnificent world, one tree at a time!</p>
 
 <p dir="ltr">Check out <a href="https://tree.institute/our-affiliates" target="_blank" rel="noopener noreferrer">our fabulous affiliates</a>.</p>
-<!--themify_builder_content-->
-<div id="themify_builder_content-323" data-postid="323" class="themify_builder_content themify_builder_content-323 themify_builder tf_clear">
-</div>
-
-<p>
-	<!--/themify_builder_content-->
-	<!--themify_builder_content-->
-</p>
-<div id="themify_builder_content-323" data-postid="323" class="themify_builder_content themify_builder_content-323 themify_builder tf_clear">
-</div>
-
-<p>
-	<!--/themify_builder_content-->
-	<!--themify_builder_content-->
-</p>
-<div id="themify_builder_content-323" data-postid="323" class="themify_builder_content themify_builder_content-323 themify_builder tf_clear">
-</div>
-<!--/themify_builder_content-->
-<!--themify_builder_content-->
-<div id="themify_builder_content-323" data-postid="323" class="themify_builder_content themify_builder_content-323 themify_builder tf_clear">
-</div>
-<!--/themify_builder_content-->
-<!--themify_builder_content-->
-<div id="themify_builder_content-323" data-postid="323" class="themify_builder_content themify_builder_content-323 themify_builder tf_clear">
-</div>
-<!--/themify_builder_content-->
-<!--themify_builder_content-->
-<div id="themify_builder_content-323" data-postid="323" class="themify_builder_content themify_builder_content-323 themify_builder tf_clear">
-</div>
-<!--/themify_builder_content-->
