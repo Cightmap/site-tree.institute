@@ -4,13 +4,13 @@ import BlogLayout from '../../layouts/BlogLayout.astro';
 
 export async function getStaticPaths() {
   const posts = await getCollection('blog');
-  return posts.map((post: { slug: any; }) => ({
+  return posts.map((post) => ({
     params: { slug: post.slug },
     props: { post },
   }));
 }
 
-const { post } = Astro.props as { post: { data: { title: string; description: string; pubDate: string }; slug: string; body: string } };
+const { post } = Astro.props;
 
 if (!post) {
   throw new Error(`Post not found`);
@@ -20,15 +20,38 @@ if (!post) {
 const formattedDate = post.data.pubDate
   ? new Date(post.data.pubDate).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })
   : "Unknown Date";
+
+// Fetch all blog posts and sort them (by pubDate, newest first)
+const blogPosts = await getCollection('blog');
+const sortedPosts = blogPosts.sort((a, b) => new Date(b.data.pubDate) - new Date(a.data.pubDate));
+
+// Find the current post's index
+const currentIndex = sortedPosts.findIndex((p) => p.slug === post.slug);
+
+// Determine previous and next posts
+const prevPost = currentIndex < sortedPosts.length - 1 ? {
+  title: sortedPosts[currentIndex + 1].data.title,
+  url: `/blog/${sortedPosts[currentIndex + 1].slug}`,
+} : null;
+const nextPost = currentIndex > 0 ? {
+  title: sortedPosts[currentIndex - 1].data.title,
+  url: `/blog/${sortedPosts[currentIndex - 1].slug}`,
+} : null;
 ---
 
-<BlogLayout title={post.data.title} description={post.data.description} date={formattedDate}>
+<BlogLayout
+  title={post.data.title}
+  description={post.data.description}
+  date={formattedDate}
+  prevPost={prevPost}
+  nextPost={nextPost}
+>
   <article style="max-width: 800px; margin: auto; padding: 20px; background-color: #ffffff; border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
     <h1 style="color: #2c3e50; font-size: 2.5rem; text-align: center;">{post.data.title}</h1>
     <p style="font-size: 0.9rem; color: #888; text-align: center;">Published on {formattedDate}</p>
     <hr style="margin: 20px 0; border: none; border-top: 1px solid #eee;" />
 
-    <!-- ✅ Ensure Markdown renders as HTML -->
+    <!-- Render Markdown content as HTML -->
     <div set:html={post.body}></div>
   </article>
 
